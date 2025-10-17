@@ -11,7 +11,7 @@
 <body>
     <div class="container w-50">
         <h1>Register</h1>
-        <form action="" method="post">
+        <form action="<?= BASE_URL . '?c=register' ?>" method="post">
             <div class="mb-3">
                 <label for="" class="form-label">Username</label>
                 <input type="text" name="username" id="" class="form-control">

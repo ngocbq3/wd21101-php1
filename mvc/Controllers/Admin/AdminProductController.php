@@ -2,6 +2,15 @@
 
 class AdminProductController
 {
+    public function __construct()
+    {
+        //Yêu cầu đăng nhập
+        //Nếu người dùng chưa đăng nhập thì chuyển hướng về login
+        if (!isset($_SESSION['user'])) {
+            header('Location: ' . BASE_URL . '?c=login');
+        }
+    }
+
     //hiển thị danh sách sản phẩm
     public function index()
     {

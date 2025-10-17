@@ -11,14 +11,19 @@
 <body>
     <div class="container w-50">
         <h1>Login</h1>
-        <form action="" method="post">
+        <?php if (isset($message)): ?>
+            <div class="alert alert-danger text-danger"><?= $message ?></div>
+        <?php endif ?>
+        <form action="<?= BASE_URL . '?c=login' ?>" method="post">
             <div class="mb-3">
                 <label for="" class="form-label">Email</label>
                 <input type="email" name="email" id="" class="form-control">
+                <span class="text-danger"><?= $error['email'] ?? '' ?></span>
             </div>
             <div class="mb-3">
                 <label for="" class="form-label">Password</label>
                 <input type="password" name="password" id="" class="form-control">
+                <span class="text-danger"><?= $error['password'] ?? '' ?></span>
             </div>
 
             <div class="mb-3">

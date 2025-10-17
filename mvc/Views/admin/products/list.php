@@ -10,7 +10,13 @@
 
 <body>
     <div class="container">
-        <header>Menu</header>
+        <header>Menu
+
+            <strong>
+                <?= $_SESSION['user']['username'] ?>
+            </strong>
+            <a href="<?= BASE_URL . '?c=logout' ?>" class="btn btn-primary">Logout</a>
+        </header>
         <h1>Danh sách sản phẩm</h1>
 
         <table class="table">
